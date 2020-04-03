@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const personForm = document.querySelector('#person-form');
   personForm.addEventListener('submit', handleFormSubmit);
+
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 
 
@@ -33,12 +36,7 @@ const createListOfPeopleItem = function (form) {
   return readingListOfPeople;
 }
 
-
-//
-// const firstName = event.target.first_name.value;
-// const houseName = event.target.house_name.value;
-// const roleTitle = event.target.role_title.value;
-
-
-
-// newListItem.textContent = `${firstName} ${houseName} ${roleTitle}`;
+const handleDeleteAllClick = function (event) {
+  const readingListOfPeople = document.querySelector('#form-result');
+  readingListOfPeople.innerHTML = '';
+}
