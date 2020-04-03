@@ -22,7 +22,15 @@ const createListOfPeopleItem = function (form) {
   first_name.textContent = form.first_name.value;
   readingListOfPeople.appendChild(first_name);
 
-  return readingListOfPeople
+  const house_name = document.createElement('h3');
+  house_name.textContent = form.house_name.value;
+  readingListOfPeople.appendChild(house_name);
+
+  const role_title = document.createElement('h4');
+  role_title.textContent = form.role_title.value;
+  readingListOfPeople.appendChild(role_title);
+
+  return readingListOfPeople;
 }
 
 
