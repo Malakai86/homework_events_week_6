@@ -14,6 +14,9 @@ const handleFormSubmit = function (event) {
   const peopleList = document.querySelector('#form-result');
   peopleList.appendChild(readingListOfPeople);
 
+  const form = event.target;
+
+
   event.target.reset();
 }
 
@@ -25,6 +28,7 @@ const createListOfPeopleItem = function (form) {
   first_name.textContent = form.first_name.value;
   readingListOfPeople.appendChild(first_name);
 
+
   const house_name = document.createElement('h3');
   house_name.textContent = form.house_name.value;
   readingListOfPeople.appendChild(house_name);
@@ -32,6 +36,12 @@ const createListOfPeopleItem = function (form) {
   const role_title = document.createElement('h4');
   role_title.textContent = form.role_title.value;
   readingListOfPeople.appendChild(role_title);
+
+  const chara_type = document.createElement('h4');
+  chara_type.textContent = form.chara_type.value;
+  readingListOfPeople.appendChild(chara_type);
+
+
 
   return readingListOfPeople;
 }
