@@ -24,21 +24,21 @@ const createListOfPeopleItem = function (form) {
   const readingListOfPeople = document.createElement('li');
   readingListOfPeople.classList.add('form-result-item');
 
-  const first_name = document.createElement('h2');
-  first_name.textContent = form.first_name.value;
+  const first_name = document.createElement('p');
+  first_name.textContent = 'Hello I am ' + form.first_name.value + '.';
   readingListOfPeople.appendChild(first_name);
 
 
-  const house_name = document.createElement('h3');
-  house_name.textContent = form.house_name.value;
+  const house_name = document.createElement('p');
+  house_name.textContent = 'I am born of the great house ' + form.house_name.value + '.';
   readingListOfPeople.appendChild(house_name);
 
-  const role_title = document.createElement('h4');
-  role_title.textContent = form.role_title.value;
+  const role_title = document.createElement('p');
+  role_title.textContent = 'My trade is ' + form.role_title.value + '.';
   readingListOfPeople.appendChild(role_title);
 
-  const chara_type = document.createElement('h4');
-  chara_type.textContent = form.chara_type.value;
+  const chara_type = document.createElement('p');
+  chara_type.textContent = 'People believe me to be ' + form.chara_type.value + '.';
   readingListOfPeople.appendChild(chara_type);
 
 
